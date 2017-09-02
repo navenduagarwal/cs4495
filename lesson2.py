@@ -13,10 +13,6 @@ img = cv2.imread('img/dolphin.png', 0)  # 0 for grayscale
 # # Class of Image
 # print(img.dtype)
 
-# value at given location
-print(img[50, 100])
-
-# value for entire row
-print(img[50, :])
-plt.plot(img[50, :])
-plt.show()
+# a slice of image
+slice = img[100:103, 200:203]  # note in open cv we have to change a range a little bit to include boundaries
+print(slice)
