@@ -9,3 +9,6 @@ cv2.waitKey(0)
 
 # Image Size
 print(img.shape)
+
+# Class of Image
+print(img.dtype)
