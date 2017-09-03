@@ -2,17 +2,20 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-# Image Difference
+# Gaussian Dist
 
 # load image 1
-dolphin = cv2.imread('img/dolphin.png', 0)
-cv2.imshow('dolphin', dolphin)
+saturn = cv2.imread('img/saturn.png', 0)
+cv2.imshow('saturn', saturn)
 cv2.waitKey(0)
 
-im = np.empty(dolphin.shape, np.uint8)  # creating empty image
-cv2.randn(im, 0, 50) # converted to gaussian noise
-cv2.imshow('noise', im)
-cv2.imshow(' image witj noise', dolphin + im)
+im = np.empty(saturn.shape, np.uint8)  # creating empty image
+im2 = cv2.randn(im, 0, 100) # sigma of 100
+cv2.imshow('noise', im2)
+cv2.imshow(' image with noise', saturn + im2)
+
+average_color = np.uint8(np.average(saturn))  # average color
+print(average_color)
 cv2.waitKey(0)
 
 cv2.destroyAllWindows()  # close all openCV windows
