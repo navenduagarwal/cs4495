@@ -19,4 +19,9 @@ diff = dolphin - bicycle
 cv2.imshow('diff', diff)
 cv2.waitKey(0)
 
+# difference with cv
+diff_cv = cv2.subtract(dolphin, bicycle)
+cv2.imshow('diff_cv', diff_cv)
+cv2.waitKey(0)
+
 cv2.destroyAllWindows()  # close all openCV windows
